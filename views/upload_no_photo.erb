@@ -1,0 +1,32 @@
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <!-- Bootstrap 3.3.x core CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <!-- Custom styles for Paparazzi -->
+    <link href="css/paparazzi.css" rel="stylesheet">
+    <title>Paparazzi - an LDAP picture update web service</title>
+  </head>
+  <body>
+		<div class="container">
+			<h1 class="heading">Paparazzi</h1>
+			<p class="heading">an LDAP picture update web service</h2>
+			<div class="flash"><p><%= "#{session[:flash]}" %></p></div>
+			<form method="post" class="form-signin" action="upload" enctype="multipart/form-data">
+				<h3 class="form-signin-heading">Welcome <%= "#{@user.givenname[0]} #{@user.sn[0]}" %></h3>
+				<p>You don't currently have a photo</p>
+				<p>To change your photo, please use this form.  Please upload a JPEG, preferably 256x256 pixels (other sizes may be scaled/cropped).</p>
+				<p>
+					<input type="file" id="inputFile" required class="form-control" name="file" size="60" />
+					<br />
+        	<button class="btn btn-lg btn-primary btn-block" type="submit">submit</button>
+				</p>
+				<br />
+				<p><a href="logout">logout</a></p>
+	   	</form>
+		</div>
+  </body>
+</html>

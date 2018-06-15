@@ -1,0 +1,7 @@
+source 'http://rubygems.org'
+gem 'sinatra'
+gem 'net-ldap'
+gem 'logger'
+gem 'ruby-filemagic'
+gem 'rmagick'
+gem 'dotenv'
